@@ -1,0 +1,2 @@
+a=$HOME/artforaleppo   ; alias a='cd $a'
+aw=$a/web              ; alias aw='cd $aw'
