@@ -1,0 +1,14 @@
+/* header */
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 20px;
+}
+.header nav li {
+    display: inline;
+    margin: 0 40px 0 0;
+}
+/* body */
+
+/* footer */
