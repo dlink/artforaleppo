@@ -1,18 +1,39 @@
 /* header */
 
-.header nav ul {
+.header nav {
     list-style: none;
     padding: 0;
-    margin: 20px 0 20px;
+    max-width: 1188px;
+    margin: 20px auto;
+}
+.header nav ul {
+    padding: 0;
 }
 .header nav li {
     display: inline;
-    margin: 0 40px 0 0;
+    padding: 12px 30px;
+    border: solid 1px white;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: black;
+    display: inline-block;
 }
+.header nav li:hover {
+    background-color: #f5f2f2;
+}
+@media only screen and (max-width: 480px) {
+    .header nav li {
+	background-color: #f5f2f2;
+	display: block;
+    }
+}
+						  
 /* body */
 .body p {
-    padding: 20px 50px;
-    font-size: 1.2em;
+    padding: 20px 0;
+    max-width: 1188px;
+    margin: auto;
+    font-size: 1.5em;
 }
 .body img {
     width: auto;
