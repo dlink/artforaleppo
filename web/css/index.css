@@ -14,4 +14,9 @@
     padding: 20px 50px;
     font-size: 1.2em;
 }
+.body img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
 /* footer */
