@@ -30,7 +30,7 @@ class Index(HtmlPage):
         return div(o, class_='header')
 
     def getBody(self):
-        return img(src='images/artforaleppo.jpg')
+        return open('body.html', 'r').read()
 
     def getFooter(self):
         o = ''

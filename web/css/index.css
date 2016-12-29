@@ -10,5 +10,8 @@
     margin: 0 40px 0 0;
 }
 /* body */
-
+.body p {
+    padding: 20px 50px;
+    font-size: 1.2em;
+}
 /* footer */
