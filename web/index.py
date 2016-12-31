@@ -27,7 +27,7 @@ class Index(HtmlPage):
         o = nav(
             ul(li('Art for Aleppo'         , onClick='showPage(1)') + \
                li('Save the Children Syria', onClick='showPage(2)') + \
-               li('Call to Artists'        , onClick='showPage(3)') + \
+               li('Open Call to Artists'   , onClick='showPage(3)') + \
                li('Artwork Gallery'        , onClick='showPage(4)') + \
                li('Make a Donation'        , onClick='showPage(5)')))
         return div(o, class_='header')
