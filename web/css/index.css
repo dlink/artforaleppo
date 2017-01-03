@@ -1,5 +1,10 @@
 /* header */
 
+body {
+    color: grey;
+    font-family: "Helvetica Neue";
+}
+
 .header nav {
     list-style: none;
     padding: 0;
@@ -11,11 +16,9 @@
 }
 .header nav li {
     display: inline;
-    padding: 12px 30px;
+    padding: 12px 10px 12px 10px;
     border: solid 1px white;
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    color: black;
+    /* font-weight: bold; */
     display: inline-block;
 }
 .header nav li:hover {
@@ -33,7 +36,7 @@
     padding: 20px 0;
     max-width: 1188px;
     margin: auto;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 .body li {
     font-size: 1.2em;

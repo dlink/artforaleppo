@@ -24,12 +24,18 @@ class Index(HtmlPage):
         return div(o, class_='container body')
 
     def getHeader(self):
-        o = nav(
-            ul(li('Art for Aleppo'         , onClick='showPage(1)') + \
-               li('Save the Children Syria', onClick='showPage(2)') + \
-               li('Open Call to Artists'   , onClick='showPage(3)') + \
-               li('Artwork Gallery'        , onClick='showPage(4)') + \
-               li('Make a Donation'        , onClick='showPage(5)')))
+        menu = ['Art for <strong>Aleppo</strong>',
+                      'Save the <strong>Children</strong>',
+                      'Open Call to <strong>Artists</strong>',
+                      'Artwork <strong>Gallery</strong>',
+                      'Make a <strong>Donation</strong>']
+        menu_str = ''
+        for i, s in enumerate(menu):
+            if i != 0:
+                menu_str += li('|')
+            menu_str += li(s, onClick='showPage(%s)' % (i+1))
+
+        o = nav(ul(menu_str))
         return div(o, class_='header')
 
     def getBody(self):
