@@ -25,17 +25,23 @@ class Index(HtmlPage):
 
     def getHeader(self):
         menu = ['Art for <strong>Aleppo</strong>',
-                      'Save the <strong>Children</strong>',
-                      'Open Call to <strong>Artists</strong>',
-                      'Artwork <strong>Gallery</strong>',
-                      'Make a <strong>Donation</strong>']
+                'Save the <strong>Children</strong>',
+                'Open Call to <strong>Artists</strong>',
+                'Artwork <strong>Gallery</strong>',
+                'Make a <strong>Donation</strong>']
         menu_str = ''
         for i, s in enumerate(menu):
             # introduce menuItem span to allow inserting '| between elements
             item = span(s, class_='menuItem')
             menu_str += li(item, onClick='showPage(%s)' % (i+1))
-
-        o = nav(ul(menu_str))
+            
+        # hamberger icon
+        menu_str += li('&#9776;',
+                       class_='icon',
+                       href="javascript:void(0);",
+                       onclick='menuHamberger()')
+        
+        o = nav(ul(menu_str, class_='topnav', id='topnav'))
         return div(o, class_='header')
 
     def getBody(self):
