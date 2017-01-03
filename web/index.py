@@ -31,9 +31,9 @@ class Index(HtmlPage):
                       'Make a <strong>Donation</strong>']
         menu_str = ''
         for i, s in enumerate(menu):
-            if i != 0:
-                menu_str += li('|')
-            menu_str += li(s, onClick='showPage(%s)' % (i+1))
+            # introduce menuItem span to allow inserting '| between elements
+            item = span(s, class_='menuItem')
+            menu_str += li(item, onClick='showPage(%s)' % (i+1))
 
         o = nav(ul(menu_str))
         return div(o, class_='header')

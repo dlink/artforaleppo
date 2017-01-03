@@ -16,14 +16,23 @@ body {
 }
 .header nav li {
     display: inline;
-    padding: 12px 10px 12px 10px;
     border: solid 1px white;
     /* font-weight: bold; */
     display: inline-block;
 }
-.header nav li:hover {
+.header nav .menuItem {
+    padding: 12px 10px;
+}
+.header nav .menuItem:hover {
     background-color: #f5f2f2;
 }
+@media only screen and (min-width: 481px) {
+    .header nav li + li:before {
+	content: "|";
+	padding: 0 10px 0 5px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .header nav li {
 	background-color: #f5f2f2;
