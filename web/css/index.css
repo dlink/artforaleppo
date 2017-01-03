@@ -40,7 +40,7 @@ body {
     /* .header nav ul li:not(:first-child) {display: none;} */
     .header nav ul li {display: none;}
     .header nav ul li.icon {
-	float: right;
+	/* float: left; */
 	display: inline-block;
 	font-size: 2em;
     }
@@ -48,7 +48,13 @@ body {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
-    .header nav ul.responsive {position: relative;}
+    .header nav ul.responsive {
+	position: relative;
+    }
+    .header nav ul:after {
+	content: 'Art for Aleppo';
+	padding: 0 20px 30px;
+    }
     .header nav ul.responsive li.icon {
 	position: absolute;
 	right: 0;
