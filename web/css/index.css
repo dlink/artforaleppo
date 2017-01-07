@@ -94,5 +94,13 @@ body {
     max-width: 100%;
     height: auto;
 }
-/* footer */
 
+/* donation page */
+
+#page5 .text-box {
+    margin-top: 40px;
+    border: grey 1px solid;
+    padding: 20px 80px;
+}
+
+/* footer */
