@@ -17,7 +17,7 @@ class Index(HtmlPage):
         
         self.javascript_src.extend(['js/index.js'])
 
-        self.page = 1
+        self.page = '1'
         
     def process(self):
         HtmlPage.process(self)
