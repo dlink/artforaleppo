@@ -13,9 +13,12 @@ class Menu(object):
                 'Make a <strong>Donation</strong>']
         menu_str = ''
         for i, s in enumerate(menu):
-            # introduce menuItem span to allow inserting '| between elements
             item = span(s, class_='menuItem')
-            if type == 1:
+            # use css and js for man menu, and for vpics menu option
+            # use href from the vpics page
+            
+            # type 1 or vpics page
+            if type == 1 or i == 3: 
                 menu_str += li(item, onClick='showPage(%s)' % (i+1))
             else:
                 menu_str += li(item,

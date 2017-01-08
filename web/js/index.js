@@ -5,8 +5,8 @@ function showPage(n) {
 	id = 'page' + n;
 	hidePages();
 	document.getElementById(id).style.display = 'inline';
-	menuHamberger();
     }
+    menuHamberger();
 }
 function hidePages() {
     document.getElementById('page1').style.display = 'none';
