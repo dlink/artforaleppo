@@ -2,6 +2,7 @@
 
 from vweb.htmlpage import HtmlPage
 from vweb.html import *
+from menu import Menu
 
 class Index(HtmlPage):
     
@@ -16,36 +17,29 @@ class Index(HtmlPage):
         
         self.javascript_src.extend(['js/index.js'])
 
+        self.page = 1
+        
+    def process(self):
+        HtmlPage.process(self)
+        if 'p' in self.form:
+            self.page = self.form['p'].value
+        
     def getHtmlContent(self):
         o = \
-            self.getHeader() + \
+            Menu().getHeader() + \
             self.getBody() + \
             self.getFooter()
         return div(o, class_='container body')
 
-    def getHeader(self):
-        menu = ['Art for <strong>Aleppo</strong>',
-                'Save the <strong>Children</strong>',
-                'Open Call to <strong>Artists</strong>',
-                'Artwork <strong>Gallery</strong>',
-                'Make a <strong>Donation</strong>']
-        menu_str = ''
-        for i, s in enumerate(menu):
-            # introduce menuItem span to allow inserting '| between elements
-            item = span(s, class_='menuItem')
-            menu_str += li(item, onClick='showPage(%s)' % (i+1))
-            
-        # hamberger icon
-        menu_str += li('&#9776;',
-                       class_='icon',
-                       href="javascript:void(0);",
-                       onclick='menuHamberger()')
-        
-        o = nav(ul(menu_str, class_='topnav', id='topnav'))
-        return div(o, class_='header')
-
     def getBody(self):
-        return open('body.html', 'r').read()
+        html =  open('body.html', 'r').read()
+        # set all but this page to display: none
+        for i in range(1, 6):
+            if str(i) != self.page:
+                html = html.replace('id="page%s"' % i,
+                                    'id="page%s" style="display: none;"' % i)
+        return html
+            
 
     def getFooter(self):
         o = ''

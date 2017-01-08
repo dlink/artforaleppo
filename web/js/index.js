@@ -1,8 +1,12 @@
 function showPage(n) {
-    id = 'page' + n;
-    hidePages();
-    document.getElementById(id).style.display = 'inline';
-    menuHamberger();
+    if (n == '4') { // Artwork Gallery
+	window.location.href = "/vpics.py";
+    } else {
+	id = 'page' + n;
+	hidePages();
+	document.getElementById(id).style.display = 'inline';
+	menuHamberger();
+    }
 }
 function hidePages() {
     document.getElementById('page1').style.display = 'none';
