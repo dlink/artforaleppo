@@ -119,3 +119,6 @@ body {
 .footer a {
     color: grey;
 }
+.footer span.selectedMenuItem a {
+    color: red;
+}

@@ -31,10 +31,6 @@ class BasePage(HtmlPage):
             self.getFooter()
         return div(o, class_='container body')
 
-    def getBody(self):
-        return 'book'
-            
-
     def getFooter(self):
-        html = open('footer.html', 'r').read()
+        html = open('html/footer.html', 'r').read()
         return html
