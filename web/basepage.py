@@ -16,8 +16,6 @@ class BasePage(HtmlPage):
             'css/main.css']
         
         self.javascript_src.extend(['js/main.js'])
-
-        self.page = '1'
         
     def process(self):
         HtmlPage.process(self)

@@ -7,7 +7,11 @@ from menu import Menu
 from basepage import BasePage
 
 class WhoWeAre(BasePage):
-    
+
+    def __init__(self):
+        BasePage.__init__(self)
+        self.style_sheets.extend(['css/whoweare.css'])
+        
     def getBody(self):
         return open('html/whoweare.html', 'r').read()
 
