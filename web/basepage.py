@@ -13,9 +13,9 @@ class BasePage(HtmlPage):
         self.style_sheets = [
             'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/' \
                 'bootstrap.min.css',
-            'css/index.css']
+            'css/main.css']
         
-        self.javascript_src.extend(['js/index.js'])
+        self.javascript_src.extend(['js/main.js'])
 
         self.page = '1'
         

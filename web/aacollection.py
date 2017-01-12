@@ -28,7 +28,7 @@ class AaCollection(Collection):
             
         self.style_sheets.append('https://maxcdn.bootstrapcdn.com/bootstrap'
                                  '/3.3.6/css/bootstrap.min.css')
-        self.style_sheets.append('css/index.css')
+        self.style_sheets.append('css/main.css')
         self.javascript_src.append('js/index.js')
 
         self.nav = AaNav()
