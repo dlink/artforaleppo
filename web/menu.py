@@ -2,28 +2,18 @@ from vweb.html import *
 
 class Menu(object):
 
-    def getHeader(self, type=1):
-        '''type 1 = normal page, uses js and css to change pages
-                2 = from vpics, need to refesh page. use url args
-        '''
-        menu = ['Art for <strong>Aleppo</strong>',
-                'Save the <strong>Children</strong>',
-                'Open Call to <strong>Artists</strong>',
-                'Artwork <strong>Gallery</strong>',
-                'Make a <strong>Donation</strong>']
+    def getHeader(self):
+        menu = [['Art for <strong>Aleppo</strong>', '/'],
+                ['Save the <strong>Children</strong>', '/savethechildren.py'],
+                ['Open Call to <strong>Artists</strong>','/calltoartists.py'],
+                ['Artwork <strong>Gallery</strong>', '/vpics.py'],
+                ['Make a <strong>Donation</strong>', 'donate.py']]
+
         menu_str = ''
-        for i, s in enumerate(menu):
-            item = span(s, class_='menuItem')
-            # use css and js for man menu, and for vpics menu option
-            # use href from the vpics page
-            
-            # type 1 or vpics page
-            if type == 1 or i == 3: 
-                menu_str += li(item, onClick='showPage(%s)' % (i+1))
-            else:
-                menu_str += li(item,
-                               onClick="window.location.href='/?p=%s'" % (i+1))
-                
+        for m, href in menu:
+            menu_str += li(span('<a href="%s">%s</a>' % (href, m),
+                                class_='menuItem'))
+
         # hamberger icon
         menu_str += li('&#9776;',
                        class_='icon',

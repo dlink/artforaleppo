@@ -39,8 +39,9 @@ class AaCollection(Collection):
             self.messageLine() +\
             self.navAndDisplayArea(),
             class_='container body')
+    
     def header(self):
-        return Menu().getHeader(type=2)
+        return Menu().getHeader()
 
     def pic_div(self, i):
         '''

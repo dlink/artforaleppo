@@ -2,11 +2,11 @@
 
 from basepage import BasePage
 
-class Index(BasePage):
+class SaveTheChildren(BasePage):
 
     def getBody(self):
-        html =  open('html/index.html', 'r').read()
+        html =  open('html/savethechildren.html', 'r').read()
         return html
             
 if __name__ == '__main__':
-    Index().go()
+    SaveTheChildren().go()

@@ -20,6 +20,9 @@ body {
     /* font-weight: bold; */
     display: inline-block;
 }
+.header nav li a {
+    color: grey;
+}
 .header nav .menuItem {
     padding: 12px 10px;
 }
@@ -104,3 +107,9 @@ body {
 }
 
 /* footer */
+.footer {
+    float: right;
+}
+.footer .separator {
+    padding: 0 20px;
+}

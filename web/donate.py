@@ -2,11 +2,11 @@
 
 from basepage import BasePage
 
-class Index(BasePage):
+class Donate(BasePage):
 
     def getBody(self):
-        html =  open('html/index.html', 'r').read()
+        html =  open('html/donate.html', 'r').read()
         return html
             
 if __name__ == '__main__':
-    Index().go()
+    Donate().go()
