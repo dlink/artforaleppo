@@ -1,0 +1,10 @@
+#saveTheChildren div.logo img {
+    width: 160px;
+    padding-bottom: 10px;
+}
+#saveTheChildren .downloadPdf a {
+    color: grey;
+}
+#saveTheChildren .downloadPdf p {
+    padding: 10px 0px 0px;
+}
