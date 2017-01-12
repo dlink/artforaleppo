@@ -41,7 +41,7 @@ class AaCollection(Collection):
             class_='container body')
     
     def header(self):
-        return Menu().getHeader()
+        return Menu().getHeader(self)
 
     def pic_div(self, i):
         '''

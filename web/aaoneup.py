@@ -37,7 +37,7 @@ class aaOneup(Oneup):
             class_='container body')
     
     def header(self):
-        return Menu().getHeader(type=2)
+        return Menu().getHeader(self)
 
     
     def picNav(self):

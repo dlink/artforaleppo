@@ -23,6 +23,9 @@ body {
 .header nav li a {
     color: grey;
 }
+.header nav li span.selectedMenuItem a {
+    color: red;
+}
 .header nav .menuItem {
     padding: 12px 10px;
 }

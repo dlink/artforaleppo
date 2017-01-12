@@ -26,7 +26,7 @@ class BasePage(HtmlPage):
         
     def getHtmlContent(self):
         o = \
-            Menu().getHeader() + \
+            Menu().getHeader(self) + \
             self.getBody() + \
             self.getFooter()
         return div(o, class_='container body')
