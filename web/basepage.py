@@ -16,6 +16,10 @@ class BasePage(HtmlPage):
             'css/main.css']
         
         self.javascript_src.extend(['js/main.js'])
+
+        #<meta name="google-site-verification" content="otaMOqLrF-EKMwf-7xrgCWBRQFvbF31lAMDP0cgwvnk" />
+        self.metadata = {'google-site-verification':
+                         'otaMOqLrF-EKMwf-7xrgCWBRQFvbF31lAMDP0cgwvnk'}
         
     def process(self):
         HtmlPage.process(self)
