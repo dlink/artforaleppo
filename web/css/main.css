@@ -1,4 +1,4 @@
-x/* header */
+/* header */
 
 body {
     color: grey;
@@ -24,7 +24,7 @@ body {
     color: grey;
 }
 .header nav li span.selectedMenuItem a {
-    color: red;
+    color: #d63333; /* red */
 }
 .header nav .menuItem {
     padding: 12px 10px;
@@ -89,7 +89,7 @@ body {
     padding: 20px 0;
     max-width: 1188px;
     margin: auto;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 .body li {
     font-size: 1.2em;
@@ -100,7 +100,9 @@ body {
     max-width: 100%;
     height: auto;
 }
-
+#mainImage {
+    margin: 0px 50px;
+}
 /* donation page */
 
 #page5 .text-box {
@@ -120,5 +122,5 @@ body {
     color: grey;
 }
 .footer span.selectedMenuItem a {
-    color: red;
+    color: #d63333; /* red */
 }
