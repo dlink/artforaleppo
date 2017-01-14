@@ -8,6 +8,10 @@ from basepage import BasePage
 
 class Book(BasePage):
     
+    def __init__(self):
+        BasePage.__init__(self)
+        self.style_sheets.extend(['css/book.css'])
+
     def getBody(self):
         return open('html/book.html', 'r').read()
     
