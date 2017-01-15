@@ -1,4 +1,5 @@
 #bookImage {
+    width: auto;
     margin: 10px 0px 0px 10px;
-    max-width: 800px;
+    max-width: 100%;
 }
