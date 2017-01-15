@@ -29,6 +29,7 @@ class AaCollection(Collection):
         self.style_sheets.append('https://maxcdn.bootstrapcdn.com/bootstrap'
                                  '/3.3.6/css/bootstrap.min.css')
         self.style_sheets.append('css/main.css')
+        self.style_sheets.append('css/aavpics.css')
         self.javascript_src.append('js/main.js')
 
         self.nav = AaNav()
@@ -40,6 +41,12 @@ class AaCollection(Collection):
             self.navAndDisplayArea(),
             class_='container body')
     
+    def navAndDisplayArea(self):
+        '''Override base class
+           Remove left nav
+        '''
+        return self.displayArea()
+
     def header(self):
         return Menu().getHeader(self)
 
