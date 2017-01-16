@@ -74,6 +74,9 @@ body {
 	display: block;
 	text-align: left;
     }
+    img#mainImage {
+	margin: 0px;
+    }
 }
 /* e */
 
