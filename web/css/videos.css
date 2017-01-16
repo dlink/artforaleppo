@@ -1,0 +1,8 @@
+.videoFrame {
+    width: 320px;
+    margin: 10px;
+    float: left;
+}
+#endVideoFrames {
+    clear: both;
+}

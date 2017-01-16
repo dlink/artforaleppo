@@ -17,7 +17,7 @@ class WhoWeAre(BasePage):
 
     def getFooter(self):
         html = BasePage.getFooter(self)
-        html = html.replace('id="footerItem2"', 'class="selectedMenuItem"')
+        html = html.replace('id="whoWeAreLink"', 'class="selectedMenuItem"')
         return html
             
 if __name__ == '__main__':
