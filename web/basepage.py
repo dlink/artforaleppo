@@ -15,7 +15,8 @@ class BasePage(HtmlPage):
                 'bootstrap.min.css',
             'css/main.css']
         
-        self.javascript_src.extend(['js/main.js'])
+        self.javascript_src.extend(['js/main.js',
+                                    'js/googleanalytics.js'])
 
         #<meta name="google-site-verification" content="otaMOqLrF-EKMwf-7xrgCWBRQFvbF31lAMDP0cgwvnk" />
         self.metadata = {'google-site-verification':
