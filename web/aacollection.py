@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from vweb.htmlpage import HtmlPage
+from vweb.htmltable import HtmlTable
 from vweb.html import *
 
 from collection import Collection
@@ -9,7 +10,7 @@ from menu import Menu
 
 from aanav import AaNav
 
-NUM_COLS = 3
+NUM_COLS = 4
 THUMBNAILS = '200px'
 
 class AaCollection(Collection):
@@ -49,6 +50,29 @@ class AaCollection(Collection):
 
     def header(self):
         return Menu().getHeader(self)
+
+    def pictureArea(self):
+        '''Picture area used inside DisplayArea
+           override from super class for NUM_COLS
+        '''
+        if not self.page:
+            return self.pageNotFound()
+
+        num_pics = len(self.page.pics)
+        num_rows = ((num_pics-1)/NUM_COLS)+1
+
+        table = HtmlTable(id='displayTable')
+        i = 0
+        for r in range(0, num_rows):
+            row = []
+            for c in range(0, NUM_COLS):
+                if i < num_pics:
+                    row.append(self.pic_div(i))
+                    i += 1
+            table.addRow(row)
+            table.setRowVAlign(table.rownum, 'top')
+
+        return div(table.getTable(), id='pictureArea')
 
     def pic_div(self, i):
         '''
