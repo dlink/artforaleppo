@@ -1,5 +1,7 @@
 a=$HOME/artforaleppo   ; alias a='cd $a'
+ab=$a/bin              ; alias ab='cd $ab'
 aw=$a/web              ; alias aw='cd $aw'
 
 aa=/apps/artforaleppo  ; alias aa='cd $aa'
+aab=$aa/bin            ; alias aab='cd $aab'
 aaw=$aa/web            ; alias aaw='cd $aaw'
